@@ -1,1 +1,70 @@
-# Konaa7.github.io
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>PalauteApp</title>
+    </head>
+<body>
+    <header>
+        <div class="kortti1">
+            <h1>Tervetuloa PalauteAppiin</h1>
+            <p>Tällä sivulla voit antaa palautetta.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="kortti2">
+            <h2>Anna palautetta</h2>
+
+            <nav>
+                <a href="https://www.kpedu.fi">Kpedun sivut</a>
+            </nav>
+
+            <form action="tallenna.php" method="post">
+                <label for="nimi">Nimi:</label><br>
+                <input type="text" id="nimi" name="nimi" placeholder="Etu ja sukunimi."><br>
+                        
+                <label for="sahkoposti">Sähköposti:</label><br>
+                <input type="email" id="sahkoposti" name="sahkoposti" placeholder="Sähköposti."><br>
+                        
+                <label for="palaute">Palautteesi:</label><br>
+                <textarea id="palaute" name="palaute" placeholder="Palaute teksti."></textarea><br>
+                <button type="button" id="tyhjenna">Tyhjennä palaute</button>
+                <p id="laskuri" aria-live="polite">0 merkkiä</p>
+                <label for="aihe">Palautteen aihe:</label>
+                <select id="aihe" name="aihe">
+                    <option value="kehu">Kehu</option>
+                    <option value="idea">Idea</option>
+                    <option value="ongelma">Ongelma</option>
+                </select>
+                <button type="submit">Lähetä</button><br>
+                <p id="virhe" role="alert"></p>
+            </form>
+        </div>
+
+        <div class="kortti2">
+            <h2>Yhteystiedot</h2>
+            <p><strong>Sähköposti:</strong> sähköposti@gmail.com</p>
+            <p><strong>Puhelin:</strong> 044 123 1212</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="kortti3">
+            <h2>Tietoa palvelusta</h2>
+            <p>Palauteapin avullla voit laittaa itsellesi palautetta.</p>
+            <p>Palauteapp on helppokäyttöinen lomakesivusto.</p>
+
+            <ul>
+                <li>Helppo</li>
+                <li>Hyvä</li>
+                <li>Käytännöllinen</li>
+            </ul>
+            <button id="nappi">Paina tästä</button>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
